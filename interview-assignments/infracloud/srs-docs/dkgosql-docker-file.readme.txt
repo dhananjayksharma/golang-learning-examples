@@ -19,6 +19,4 @@ docker push dhananjayksharma/dkgosql-infracloud:latest
 
 docker login -u dhananjayksharma
 
- 
-
 docker run -it -p 8989:8989 dhananjayksharma/dkgosql-infracloud:latest
