@@ -1,0 +1,39 @@
+
+kubectl apply -f deployment.yaml
+
+
+kubectl get deployments nginx-deployment
+kubectl get pods
+kubectl get pods -o wide
+kubectl describe deployments nginx-deployment
+
+
+kubectl get replicasets
+kubectl describe replicasets
+
+
+Create a Service object that exposes the deployment:
+    kubectl expose deployment nginx-deployment --type=LoadBalancer --name=my-service 
+    kubectl expose deployment nginx-deployment --type=NodePort --port=80 --name=my-service 
+    kubectl expose deployment nginx-deployment --target-port 80 --port=83 --name=my-service 
+   
+    minikube service my-service --url
+
+    kubectl expose deployment nginx-deployment --type=NodePort  --target-port 80  --port=8080 --name=my-service-nodeport
+    minikube service my-service-nodeport --url
+
+Display information about the Service:
+    kubectl get services my-service
+    kubectl get svc
+
+Deleting a Service or Deployment
+    kubectl delete services my-service
+    kubectl delete services nginx-deployment
+    kubectl delete services my-service-nodeport
+
+
+MINIKUBE:
+    minikube addons enable metrics-server
+    minikube dashboard
+    minikube ip                 -       192.168.49.2:31398
+

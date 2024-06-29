@@ -1,0 +1,5 @@
+go test ./... -coverprofile=coverage.out
+go tool cover -func=coverage.out
+
+go test ./... -v --cover
+

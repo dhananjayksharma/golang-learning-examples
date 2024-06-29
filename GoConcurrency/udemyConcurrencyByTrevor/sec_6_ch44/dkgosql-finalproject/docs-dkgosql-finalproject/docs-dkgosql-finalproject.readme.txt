@@ -1,0 +1,4 @@
+go mod init dkgosql.com/docs-dkgosql-finalproject
+
+
+docker-compose up -d

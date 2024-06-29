@@ -1,0 +1,32 @@
+Sleeping Barbar Problem
+
+1. Barbar-Shop
+2. Barbar
+3. Customer
+4. Waiting Room
+5. Hair cutting Time
+6. Shop Closing Time
+7. Customer - returns if Waiting room is full
+
+ShopOpen time: 100 seconds
+
+Barbar - check waiting room for any customer 
+    if has customer
+        > hair cutting start (5)
+    No customer
+        Barbar Sleeping
+
+Customer
+    -> if waiting room is empty and barbar is Sleeping
+        1. Barbar wakes up Barbar, start hair cutting
+    -> if Waiting is full
+        return backto home
+    -> if barbar is busy and waiting is not full
+        waiting
+ 
+ShopClose
+    if time is elapsed the define time - 
+        1. Shop need to ShopClose
+        2. Waiting is empty then Barbar will goto home
+        3. Waiting have customer then start hair cutt
+

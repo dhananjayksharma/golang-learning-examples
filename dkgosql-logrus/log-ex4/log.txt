@@ -1,0 +1,12 @@
+time="2022-12-03T10:53:58+05:30" level=info msg="Info message"
+time="2022-12-03T10:53:58+05:30" level=warning msg="Warn message"
+time="2022-12-03T10:53:58+05:30" level=error msg="Error message"
+time="2022-12-03T10:53:58+05:30" level=fatal msg="Fatal message"
+[INFO]: 2022-12-03 10:55:49 - Info message
+[WARNING]: 2022-12-03 10:55:49 - Warn message
+[ERROR]: 2022-12-03 10:55:49 - Error message
+[FATAL]: 2022-12-03 10:55:49 - Fatal message
+[2022-12-03 10:59:07]:[INFO]: Info message
+[2022-12-03 10:59:07]:[WARNING]: Warn message
+[2022-12-03 10:59:07]:[ERROR]: Error message
+[2022-12-03 10:59:07]:[FATAL]: Fatal message
