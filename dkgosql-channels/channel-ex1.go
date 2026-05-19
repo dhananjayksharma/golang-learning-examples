@@ -22,5 +22,5 @@ func main() {
 		fmt.Printf("c%d\n", <-datachan)
 	}
 	endTime := time.Now().Sub(startTime)
-	fmt.Printf("Total time:%d", endTime.Microseconds())
+	fmt.Printf("Total time:%d\n\n", endTime.Microseconds())
 }
