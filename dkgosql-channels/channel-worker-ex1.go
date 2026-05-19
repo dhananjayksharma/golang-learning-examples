@@ -17,13 +17,14 @@ func main() {
 	jobsChannel := make(chan string)
 	var isDoneChannel sync.WaitGroup
 	isDoneChannel.Add(5)
-	go workerPool(jobsChannel, &isDoneChannel, "workerpool-one")
-	go workerPool(jobsChannel, &isDoneChannel, "workerpool-two")
-	go workerPool(jobsChannel, &isDoneChannel, "workerpool-thred")
+
 	go workerPool(jobsChannel, &isDoneChannel, "workerpool-four")
 	go workerPool(jobsChannel, &isDoneChannel, "workerpool-five")
+	go workerPool(jobsChannel, &isDoneChannel, "workerpool-one")
+	go workerPool(jobsChannel, &isDoneChannel, "workerpool-two")
+	go workerPool(jobsChannel, &isDoneChannel, "workerpool-three")
 	jobAllocationCnt := 0
-	for i := 1; i <= 500000; i++ {
+	for i := 1; i <= 2; i++ {
 		jobsChannel <- fmt.Sprintf("job id: %d", i)
 		jobAllocationCnt++
 	}
