@@ -32,3 +32,9 @@ func Sum(n ...int) int {
 	}
 	return sum
 }
+func TowSum(list []int, target int) int {
+	num:= target - list[0]
+	for _, v := range list {
+		if v ==
+	}
+}

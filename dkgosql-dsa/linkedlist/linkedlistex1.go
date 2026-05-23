@@ -36,5 +36,6 @@ func main() {
 	linkedlist.insert(1)
 	linkedlist.insert(10)
 	linkedlist.insert(12)
+	linkedlist.insert(42)
 	linkedlist.Print()
 }

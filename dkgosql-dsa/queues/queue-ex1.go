@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 )
 
 type Queue struct {
@@ -25,6 +26,13 @@ func (q *Queue) Dequeue() (int, error) {
 func (q *Queue) IsEmpty() bool {
 	return len(q.items) == 0
 }
+func (q Queue) LenNew() {
+	fmt.Println("Inside:", len(q.items))
+}
+
+func (q *Queue) AddNew(v int) {
+	q.items = append(q.items, v)
+}
 
 func (q *Queue) Size() int {
 	return len(q.items)
@@ -35,6 +43,13 @@ func main() {
 	queue.Enqueue(10)
 	queue.Enqueue(20)
 	queue.Enqueue(30)
+	fmt.Println("List item before:", queue.items)
+	queue.AddNew(99)
+	fmt.Println("List item after:", queue.items)
+
+	queue.LenNew()
+
+	os.Exit(0)
 	fmt.Println("Size:", queue.Size())
 	item, err := queue.Dequeue()
 	if err == nil {
