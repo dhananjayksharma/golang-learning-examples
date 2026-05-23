@@ -1,0 +1,18 @@
+{
+	"ulid": "01KQY880GS3Z12N3DPHAT75B02",
+	"minTime": 1778047202130,
+	"maxTime": 1778054400000,
+	"stats": {
+		"numSamples": 471772,
+		"numFloatSamples": 471772,
+		"numSeries": 2407,
+		"numChunks": 2473
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01KQY880GS3Z12N3DPHAT75B02"
+		]
+	},
+	"version": 1
+}

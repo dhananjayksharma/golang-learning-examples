@@ -9,8 +9,9 @@ func GetTwoSum(nums []int, target int) []int {
 	for i, v := range nums {
 		// twoSumSlice = append(twoSumSlice)
 		// fmt.Printf("len:%d, cap:%d, twoSumSlice:%v\n\n", len(twoSumSlice), cap(twoSumSlice), twoSumSlice)
+		fmt.Println("twoSumMap:", twoSumMap, "\n")
 		if j, ok := twoSumMap[target-v]; ok {
-			fmt.Printf("j:%d,v:%d\n", j, i)
+			fmt.Printf("j value:%d, i index:%d\n", j, i)
 			twoSumMap[v] = i
 
 			return []int{j, i}
@@ -27,7 +28,12 @@ func main() {
 
 	fmt.Printf("nums:%v\n", nums)
 
-	out := GetTwoSum(nums, 11)
+	out := GetTwoSum(nums, 20)
 
-	fmt.Printf("output:%v\n", out)
+	if len(out) == 2 {
+		fmt.Printf("output:%v, v1:%d, v2:%d\n", out, nums[out[0]], nums[out[1]])
+	} else {
+		fmt.Println("Target not found")
+	}
+
 }

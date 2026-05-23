@@ -1,0 +1,1 @@
+time=2026-05-06T16:06:49.205+05:30 level=ERROR source=main.go:700 msg="Error loading config (--config.file=prometheus.yml)" file=/Users/dkgosql/dev-app-local/golang-learning-examples/prometheus.yml err="open prometheus.yml: no such file or directory"
